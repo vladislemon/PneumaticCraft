@@ -24,6 +24,7 @@ import pneumaticCraft.common.fluid.Fluids;
 import pneumaticCraft.common.item.Itemss;
 import pneumaticCraft.common.network.GuiSynced;
 import pneumaticCraft.common.thirdparty.computercraft.LuaMethod;
+import pneumaticCraft.lib.Names;
 import pneumaticCraft.lib.PneumaticValues;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -319,7 +320,7 @@ public class TileEntityPlasticMixer extends TileEntityBase implements IFluidHand
         if(itemstack == null) return true;
         switch(i){
             case INV_INPUT:
-                return itemstack.getItem() == Itemss.plastic;
+                return isPlastic(itemstack);
             case INV_OUTPUT:
                 return false;
             case INV_DYE_RED:
@@ -331,6 +332,17 @@ public class TileEntityPlasticMixer extends TileEntityBase implements IFluidHand
             default:
                 return itemstack.getItem() == Itemss.machineUpgrade;
         }
+    }
+
+    private static boolean isPlastic(ItemStack itemstack) {
+        int[] oreIDs = OreDictionary.getOreIDs(itemstack);
+        int oreID = OreDictionary.getOreID(Names.ITEM_PLASTIC);
+        for (int id : oreIDs) {
+            if (id == oreID) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

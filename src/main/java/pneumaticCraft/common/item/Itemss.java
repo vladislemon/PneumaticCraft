@@ -2,6 +2,7 @@ package pneumaticCraft.common.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import pneumaticCraft.PneumaticCraft;
 import pneumaticCraft.common.semiblock.SemiBlockActiveProvider;
@@ -105,6 +106,11 @@ public class Itemss{
         registerItems();
 
         OreDictionary.registerOre(Names.INGOT_IRON_COMPRESSED, ingotIronCompressed);
+        for (int i = 0; i < 16; i++) {
+            ItemStack itemStack = new ItemStack(plastic, 1, i);
+            OreDictionary.registerOre(Names.SHEET_PLASTIC, itemStack);
+            OreDictionary.registerOre(Names.ITEM_PLASTIC, itemStack);
+        }
     }
 
     private static void registerItems(){

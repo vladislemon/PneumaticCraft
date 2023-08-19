@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "${modId}",
+    "name": "${modName}",
+    "version": "${modVersion}",
+    "mcversion": "${minecraftVersion}",
+    "authors": [
+      "MineMaarten"
+    ],
+    "description": "A technical mod all about pneumatics!",
+    "url": "www.minemaarten.com",
+    "credits": "Made by MineMaarten, artwork (re)done by Thelder and Morton00000!",
+    "updateUrl": "http://www.minemaarten.com/downloads/",
+    "logoFile": "http://www.minemaarten.com/wp-content/uploads/2013/06/2013-06-08_18.29.17.png",
+    "parent": "",
+    "screenshots": [
+      "http://www.minemaarten.com/wp-content/uploads/2013/06/2013-06-08_18.29.17.png"
+    ]
+  }
+]

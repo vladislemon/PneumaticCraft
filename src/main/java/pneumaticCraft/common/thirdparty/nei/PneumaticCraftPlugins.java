@@ -194,7 +194,7 @@ public abstract class PneumaticCraftPlugins extends TemplateRecipeHandler{
     }
 
     @Override
-    public List<String> handleTooltip(GuiRecipe guiRecipe, List<String> currenttip, int recipe){
+    public List<String> handleTooltip(GuiRecipe<?> guiRecipe, List<String> currenttip, int recipe){
         //  super.handleTooltip(guiRecipe, currenttip, recipe);
         MultipleInputOutputRecipe r = (MultipleInputOutputRecipe)arecipes.get(recipe);
         if(GuiContainerManager.shouldShowTooltip(guiRecipe)) {
